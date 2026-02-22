@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Флорбольний клуб «Маяк» — Історія</title>
+ <!-- CSS -->  
+    <style>
+    :root {
+      --main-color: #0f4c81;
+      --accent-color: #f2b705;
+      --bg-color: #f5f7fa;
+      --text-color: #1f2933;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--main-color), #00782c);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 0.7s ease;
+    }
+
+    section.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    section h2 {
+      color: var(--main-color);
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .highlight {
+      background: var(--accent-color);
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #0b2239;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      opacity: 0.85;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.1rem;
+      }
+
+      section {
+        padding: 22px;
+      }
+    }
+  </style></head>
+<body>  <!-- HEADER -->  <header>
+    <h1>Флорбольний клуб «Маяк»</h1>
+    <p>Історія команди з серцем Вінниці</p>
+  </header>  <!-- CONTENT -->  <main><section>
+  <h2>Початок шляху</h2>
+  <p>
+    Флорбольний клуб «Маяк» був створений з ініціативи людей, які повірили,
+    що флорбол у Вінниці має велике майбутнє. У перші роки команда тренувалася
+    в непростих умовах, але саме тоді сформувалися ключові цінності клубу:
+    дисципліна, взаємоповага та командний дух.
+  </p>
+</section>
+
+<section>
+  <h2>Формування команди</h2>
+  <p>
+    З кожним роком «Маяк» зростав: до складу приєднувалися нові гравці,
+    покращувався тренувальний процес, з’являлися перші успіхи на регіональному
+    та національному рівнях. Клуб став упізнаваним у флорбольній спільноті України.
+  </p>
+</section>
+
+<section>
+  <h2>Гучні перемоги</h2>
+  <p>
+    Сезон <strong>2018/2019</strong> став історичним для «Маяка» — клуб здобув
+    звання <strong>чемпіона України з флорболу</strong>. Ця перемога стала
+    результатом багаторічної праці, віри у власні сили та справжньої командної єдності.
+  </p>
+  <span class="highlight">Чемпіони України 2018/2019</span>
+</section>
+
+<section>
+  <h2>«Маяк» сьогодні</h2>
+  <p>
+    Сьогодні «Маяк» — це стабільний флорбольний клуб з власним стилем гри,
+    чіткими амбіціями та прагненням розвивати флорбол у Вінниці. Клуб активно
+    працює з молоддю та бере участь у турнірах різного рівня.
+  </p>
+</section>
+
+<section>
+  <h2>Погляд у майбутнє</h2>
+  <p>
+    «Маяк» не зупиняється на досягнутому. Попереду — нові турніри,
+    нові покоління гравців та нові перемоги. Клуб і надалі залишатиметься
+    світлом, яке веде вперед усіх, хто вірить у командний дух та спорт.
+  </p>
+</section>
+
+  </main>  <!-- FOOTER -->  <footer>
+    <p>© Флорбольний клуб «Маяк», Вінниця</p>
+  </footer>  <!-- JavaScript -->  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script></body>
+</html>

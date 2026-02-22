@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Флорбольний клуб «Маяк» — Історія</title>
+ <!-- CSS -->  
+    <style>
+    :root {
+      --main-color: #0f4c81;
+      --accent-color: #f2b705;
+      --bg-color: #f5f7fa;
+      --text-color: #1f2933;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--main-color), #00782c);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 0.7s ease;
+    }
+
+    section.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    section h2 {
+      color: var(--main-color);
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .highlight {
+      background: var(--accent-color);
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #0b2239;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      opacity: 0.85;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.1rem;
+      }
+
+      section {
+        padding: 22px;
+      }
+    }
+  </style></head>
+<body>  <!-- HEADER -->  <header>
+    <h1>Жіноча команда</h1>
+    <p>Про нашу Жіночу команду</p>
+  </header>  <!-- CONTENT -->  <main><section>
+  <h2>Сильна команда</h2>
+  <p>
+    це дружний колектив амбітних і наполегливих гравчинь, які впевнено працюють на спільний результат. Кожна учасниця робить свій важливий внесок у гру, а разом вони створюють потужну та злагоджену команду.
+  </p>
+</section>
+
+<section>
+  <h2>Характер і дисципліна</h2>
+  <p>
+   Команда вирізняється бойовим характером, витривалістю та високою ігровою дисципліною. Дівчата не бояться складних моментів, тримають темп і демонструють впевненість у кожному матчі. Це колектив, який завжди бореться до кінця.
+  </p>
+</section>
+
+<section>
+  <h2>Справжній командний дух</h2>
+  <p>
+У команді панує підтримка, довіра та взаєморозуміння. Гравчині підбадьорюють одна одну, разом проходять через виклики та щиро радіють спільним успіхам. Саме така атмосфера формує міцну команду.
+  </p>
+  
+</section>
+
+<section>
+  <h2>Гідне представництво клубу</h2>
+  <p>
+   Жіноча команда гідно представляє свій клуб на змаганнях, показуючи технічну, швидку та красиву гру. Їхні виступи привертають увагу та викликають гордість у вболівальників. Кожен матч — це максимум віддачі.
+</section>
+
+<section>
+  <h2>Рух тільки вперед</h2>
+  <p>
+   Команда постійно розвивається, наполегливо тренується та впевнено рухається до нових вершин. Гравчині працюють над майстерністю, фізичною формою та командною взаємодією. Попереду — нові перемоги та яскраві досягнення. 💪🔥
+  </p>
+</section>
+
+  </main>  <!-- FOOTER -->  <footer>
+    <p>© Флорбольний клуб «Маяк», Вінниця</p>
+  </footer>  <!-- JavaScript -->  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script></body>
+</html>

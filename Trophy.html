@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Флорбольний клуб «Маяк» — Історія</title>
+ <!-- CSS -->  
+    <style>
+    :root {
+      --main-color: #0f4c81;
+      --accent-color: #f2b705;
+      --bg-color: #f5f7fa;
+      --text-color: #1f2933;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--main-color), #00782c);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 0.7s ease;
+    }
+
+    section.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    section h2 {
+      color: var(--main-color);
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .highlight {
+      background: var(--accent-color);
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #0b2239;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      opacity: 0.85;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.1rem;
+      }
+
+      section {
+        padding: 22px;
+      }
+    }
+  </style></head>
+<body>  <!-- HEADER -->  <header>
+    <h1>Трофеї</h1>
+    <p>Все про наші трофеї</p>
+  </header>  <!-- CONTENT -->  <main><section>
+  <h2>Чемпіони України 🏆</h2>
+  <p>
+Наша команда здобула найвищий титул — звання чемпіонів України. Це результат системної роботи, наполегливих тренувань і справжнього командного характеру. Протягом сезону ми демонстрували стабільну та впевнену гру, довівши своє лідерство на всеукраїнському рівні.
+ <span class="highlight">Чемпіони України 2018/2019</span>
+  </p>
+</section>
+
+<section>
+  <h2>Переможці Кубку Карпат 🏔️</h2>
+  <p>
+У Кубку Карпат команда показала видовищний і результативний флорбол, що принесло нам заслужену перемогу. Ми впевнено пройшли турнірну дистанцію та підтвердили свій високий клас.
+  </p>
+</section>
+
+<section>
+  <h2>Дворазові чемпіони Кубку Маяка 🏆🏆</h2>
+  <p>
+      Особлива гордість — ми вже двічі вигравали Кубок Маяка. Це свідчення стабільності команди, сили складу та постійного прагнення бути першими на домашньому турнірі.
+
+  </p>
+</section>
+
+<section>
+  <h2>Срібло Кубку Замку 🥈</h2>
+  <p>
+Ще одним вагомим досягненням стало друге місце в Кубку Замку. Команда продемонструвала бійцівський дух і до останнього боролася за перемогу. Усі ці трофеї мотивують нас рухатися тільки вперед до нових вершин. 💪🔥
+  </p>
+</section>
+
+<section>
+  <h2>Срібло престижних турнірів 🥈</h2>
+  <p>
+Команда неодноразово піднімалася на другу сходинку п’єдесталу:
+— 2 місце — Кубок Активних
+— 2 місце — Кубок Києва
+  </p>
+</section>
+
+  </main>  <!-- FOOTER -->  <footer>
+    <p>© Флорбольний клуб «Маяк», Вінниця</p>
+  </footer>  <!-- JavaScript -->  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script></body>
+</html>

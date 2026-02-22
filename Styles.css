@@ -1,0 +1,254 @@
+/* === Базові стилі === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body {
+    background: #f5f7ff;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* === Хедер === */
+header {
+    background: #00782c; /* темно-синій */
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+header .logo img {
+    height: 60px;
+}
+
+/* === Меню === */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #ffd700; /* жовтий */
+}
+
+/* === Головний банер === */
+.hero {
+    background: #f9f9f9;
+    text-align: center;
+    padding: 5px 20px;
+    color: #222;
+}
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* === Про клуб === */
+.about, .teams, .contact {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.about h2, .teams h2, .contact h2 {
+    font-size: 32px;
+    color: #0a1a4a;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* === Команди === */
+.team {
+    background: white;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    }
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #0f4c81;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #083357;
+  transform: scale(1.05);
+}
+
+.team:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.team img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* === Контакти === */
+.contact p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.contact a {
+    color: #0a1a4a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: #ffd700;
+}
+
+/* === Футер === */
+footer {
+    background: #0a1a4a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* === Адаптивність === */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        background: #0a1a4a;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+/* Загальні налаштування */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Головний заголовок */
+.main-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+}
+
+/* Колірний акцент на слові Маяк */
+.highlight {
+    color: #2e7d32; /* Зелений колір як на вашій шапці сайту */
+    display: inline-block;
+}
+
+/* Підзаголовок */
+.main-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+/* Секція "Про клуб" */
+.about-block {
+    margin-top: 40px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Легка тінь для об'єму */
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Зелена лінія під "Про клуб" */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #2e7d32;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #444;
+}
